@@ -29,6 +29,7 @@
     "mocha": "1.14.x",
     "version": "0.1.x",
     "istanbul": "0.1.x",
-    "coveralls": "2.3.x"
+    "coveralls": "2.3.x",
+    "mversion": "0.2.x"
   }
 }

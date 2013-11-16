@@ -5,7 +5,7 @@ module.exports = class Event
     (pool[key] or pool[key] = []).push callback
 
   off:(key, callback)->
-    if (pool = @__listeners[key])?
+    if (pool = @__listeners?[key])?
       pool.splice (pool.indexOf callback), 1
 
   once:(key, callback)->
@@ -14,7 +14,7 @@ module.exports = class Event
       callback.apply @, arguments
 
   emit:(key, args...)->
-    if (pool = @__listeners[key])?
+    if (pool = @__listeners?[key])?
       for listener in pool
         listener.apply @, args
 

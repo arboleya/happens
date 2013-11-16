@@ -4,7 +4,9 @@ Event system for [Theoricus](https://github.com/theoricus/theoricus) framework.
 
 [![Stories in Ready](https://badge.waffle.io/theoricus/the-event.png)](http://waffle.io/theoricus/the-event)  
 
-[![Build Status](https://travis-ci.org/theoricus/the-event.png?branch=master)](https://travis-ci.org/theoricus/the-event) [![Coverage Status](https://coveralls.io/repos/theoricus/the-event/badge.png)](https://coveralls.io/r/theoricus/the-event) [![Dependency Status](https://gemnasium.com/theoricus/the-event.png)](https://gemnasium.com/theoricus/the-event)
+[![Build Status](https://travis-ci.org/theoricus/the-event.png?branch=master)](https://travis-ci.org/theoricus/the-event) [![Coverage Status](https://coveralls.io/repos/theoricus/the-event/badge.png)](https://coveralls.io/r/theoricus/the-event)
+
+[![Dependency Status](https://gemnasium.com/theoricus/the-event.png)](https://gemnasium.com/theoricus/the-event) [![NPM version](https://badge.fury.io/js/the-event.png)](http://badge.fury.io/js/the-event)
 
 ## Usage Drafts
 

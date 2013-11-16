@@ -1,9 +1,9 @@
 {
   "name": "the-event",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Anderson Arboleya <anderson@arboleya.me>",
   "description": "Simple Event system",
-  "keywords":[
+  "keywords": [
     "event",
     "system"
   ],
@@ -21,8 +21,7 @@
   "engines": {
     "node": ">= 0.10"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "coffee-script": "1.6.x",
     "chai": "1.8.x",

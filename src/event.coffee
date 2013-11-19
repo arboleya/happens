@@ -15,7 +15,7 @@ module.exports = class Event
 
   emit:(key, args...)->
     if (pool = @__listeners?[key])?
-      for listener in pool
+      for listener in pool.slice 0
         listener.apply @, args
 
   @mixin = (target)->

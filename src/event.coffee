@@ -9,8 +9,8 @@ module.exports = class Event
       pool.splice (pool.indexOf callback), 1
 
   once:(key, callback)->
-    @on key, =>
-      @off key, callback
+    @on key, wrapper = =>
+      @off key, wrapper
       callback.apply @, arguments
 
   emit:(key, args...)->

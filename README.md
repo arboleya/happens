@@ -1,12 +1,12 @@
-# The Event
+# Happens
 
-Event system for [Theoricus](https://github.com/theoricus/theoricus) framework.
+Super simple and tiny javascript event system.
 
-[![Stories in Ready](https://badge.waffle.io/theoricus/the-event.png)](http://waffle.io/theoricus/the-event)  
+[![Stories in Ready](https://badge.waffle.io/serpentem/happens.png)](http://waffle.io/serpentem/happens)  
 
-[![Build Status](https://travis-ci.org/theoricus/the-event.png?branch=master)](https://travis-ci.org/theoricus/the-event) [![Coverage Status](https://coveralls.io/repos/theoricus/the-event/badge.png)](https://coveralls.io/r/theoricus/the-event)
+[![Build Status](https://travis-ci.org/serpentem/happens.png?branch=master)](https://travis-ci.org/serpentem/happens) [![Coverage Status](https://coveralls.io/repos/serpentem/happens/badge.png)](https://coveralls.io/r/serpentem/happens)
 
-[![Dependency Status](https://gemnasium.com/theoricus/the-event.png)](https://gemnasium.com/theoricus/the-event) [![NPM version](https://badge.fury.io/js/the-event.png)](http://badge.fury.io/js/the-event)
+[![Dependency Status](https://gemnasium.com/serpentem/happens.png)](https://gemnasium.com/serpentem/happens) [![NPM version](https://badge.fury.io/js/happens.png)](http://badge.fury.io/js/happens)
 
 ## Usage Drafts
 
@@ -17,7 +17,7 @@ Simple draft demonstrating how this should work.
 ## Inheritance
 
 ````coffeescript
-Event = require 'the-event'
+Event = require 'happens'
 
 # method 1
 class MyClass extends Event
@@ -31,7 +31,7 @@ class MyClass extends OtherClass
 In javascript you can use the `mixin`:
 
 ````javascript
-var Event = require('the-event');
+var Event = require('happens');
 
 function MyClass(){
   Event.mixin(this);
@@ -41,7 +41,7 @@ function MyClass(){
 ### Objects are welcome
 
 ````coffeescript
-Event = require 'the-event'
+Event = require 'happens'
 Event.mixin Obj = {}
 ````
 

@@ -1,4 +1,4 @@
-Event = require '../lib/event'
+Happens = require '../lib/happens'
 should = require('chai').should()
 
 describe '[extended]', ->
@@ -6,7 +6,7 @@ describe '[extended]', ->
   Extended = null
 
   before ->
-    class Extended extends Event
+    class Extended extends Happens
 
 
   it 'should listen for `once` just one time', ->

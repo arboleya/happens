@@ -1,4 +1,4 @@
-module.exports = class Event
+module.exports = class Happens
 
   on:(key, callback)->
     pool = @__listeners or @__listeners = []

@@ -1,4 +1,4 @@
-Event = require '../lib/event'
+Happens = require '../lib/happens'
 should = require('chai').should()
 
 describe '[mixed-class]', ->
@@ -8,7 +8,7 @@ describe '[mixed-class]', ->
   before ->
     class Mixed
       constructor:->
-        Event.mixin @
+        Happens.mixin @
 
 
   it 'should listen for `once` just one time', ->

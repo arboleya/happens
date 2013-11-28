@@ -1,4 +1,4 @@
-Event = require '../lib/event'
+Happens = require '../lib/happens'
 should = require('chai').should()
 
 describe '[mixed-object]', ->
@@ -7,7 +7,7 @@ describe '[mixed-object]', ->
 
   before ->
     Obj = {}
-    Event.mixin Obj
+    Happens.mixin Obj
 
 
   it 'should listen for `once` just one time', ->

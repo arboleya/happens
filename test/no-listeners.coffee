@@ -1,4 +1,4 @@
-Event = require '../lib/event'
+Happens = require '../lib/happens'
 should = require('chai').should()
 
 describe '[no-listeners]', ->
@@ -6,7 +6,7 @@ describe '[no-listeners]', ->
   Extended = null
 
   before ->
-    class Extended extends Event
+    class Extended extends Happens
 
 
   it 'should not raise error when emitting event with no listeners', ->

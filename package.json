@@ -12,11 +12,11 @@
     "test": "make test"
   },
   "directories": {
-    "src": "src"
+    "src": "./src"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/theoricus/happens"
+    "url": "http://github.com/serpentem/happens"
   },
   "engines": {
     "node": ">= 0.10"

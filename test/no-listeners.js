@@ -7,7 +7,7 @@ describe('[no-listeners]', function(){
 
   before(function(){
     Extended = function(){
-      happens.mixin(this); 
+      happens(this); 
     };
   });
 

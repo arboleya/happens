@@ -2,97 +2,53 @@
 
 Super simple and tiny javascript event system.
 
-[![Stories in Ready](https://badge.waffle.io/serpentem/happens.png)](http://waffle.io/serpentem/happens)  
-
 [![Build Status](https://travis-ci.org/serpentem/happens.png?branch=master)](https://travis-ci.org/serpentem/happens) [![Coverage Status](https://coveralls.io/repos/serpentem/happens/badge.png)](https://coveralls.io/r/serpentem/happens)
-
 [![Dependency Status](https://gemnasium.com/serpentem/happens.png)](https://gemnasium.com/serpentem/happens) [![NPM version](https://badge.fury.io/js/happens.png)](http://badge.fury.io/js/happens)
 
-## Usage Drafts
+## Instalation
 
-Simple draft demonstrating how this should work.
-
-> Attention, is a **WIP**! Do not use it yet.
-
-## Inheritance
-
-````coffeescript
-Event = require 'happens'
-
-# method 1
-class MyClass extends Event
-
-# method 2
-class MyClass extends OtherClass
-  constructor:->
-    Event.mixin @
 ````
-
-In javascript you can use the `mixin`:
-
-````javascript
-var Event = require('happens');
-
-function MyClass(){
-  Event.mixin(this);
-} 
-````
-
-### Objects are welcome
-
-````coffeescript
-Event = require 'happens'
-Event.mixin Obj = {}
+npm install happens --save-dev
 ````
 
 ## API
 
- - Listening an event:
-   - `Event.on [event-name:String], [callback:Function]`
- - Listening an event one time only:
-   - `Event.once [event-name], [callback]`
- - Unlistening:
-   - `Event.off [event-name], [callback]`
- - Emiting event passing params:
-   - `Event.emit [event-name], [param1], [param2], [paranN]`
+ - `.on(event, handler)` - listening event
+ - `.once(event, handler)` - listening event, once
+ - `.off(event, handler)` - unlistening event
+ - `.emit(event, handler)` - emitting event
 
-Whole API described in the example bellow:
+## Usage
 
-````coffeescript
-Music extends Event
-  # something here...
+````javascript
+var happens = require('happens');
 
-# listeners
-on_start = -> console.log 'music started'
-on_end = -> console.log 'music ended'
-on_beat = (volume, pan, eq)->
-  console.log 'volume', volume
-  console.log 'pan', pan
-  console.log 'eq', eq
+function MyClass() {
+  happens(this);
+}
 
-# setting up
-song = new Music
-song.once 'start', on_start
-song.once 'end', on_end
-song.on 'beat', on_beat
+MyClass.prototype.play() {
+  this.emit('play');
+};
 
-# emitting
-song.emit 'start'
-song.emit 'beat', 1, 2, 3
-song.emit 'beat', 4, 5, 6
-song.emit 'beat', 7, 8, 9
+var tmp = new MyClass;
+tmp.on('play', function(){ console.log('playing'); });
+tmp.play()
+````
+### Objects are welcome
 
-# unlistening heartbeat
-song.off 'beat', on_beat
+````javascript
+var happens = require('happens');
 
-# this calls will have no effect since the listener was removed
-song.emit 'beat', 10, 11, 12 # does nothing
-song.emit 'beat', 13, 14, 15 # does nothing
+var obj = happens({
+  play: function(){
+    this.emit('play');
+  }
+});
 
-song.emit 'die' # emit die event
-
-```
-
+obj.on('play', function(){ console.log('playing'); });
+obj.play();
+````
 
 # License
 
@@ -118,4 +74,3 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/serpentem/happens/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

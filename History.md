@@ -1,3 +1,9 @@
+0.4.0 / 2013-12-08
+===================
+ * Improving signature
+ * Porting everything from Coffeescript to Javascript
+ * Cleaning up tests
+
 0.3.1 / 2013-11-28
 ===================
  * Renaming project

@@ -1,3 +1,9 @@
+0.4.1 / 2014-04-15
+===================
+ * Handling invalid handlers
+ * Improving tests
+ * Cleaning up formatting
+
 0.4.0 / 2013-12-08
 ===================
  * Improving signature

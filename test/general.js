@@ -23,7 +23,7 @@ describe('[general]', function(){
 
   it('should listen for `on` multiple times', function(){
     var called = 0;
-    var tmp = Obj
+    var tmp = Obj;
 
     tmp.on('ping', function(){ called++; });
     tmp.emit('ping');

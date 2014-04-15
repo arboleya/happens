@@ -1,5 +1,5 @@
-var happens = require('../lib/happens'),
-    should = require('chai').should();
+var happens = require('../lib/happens');
+var should = require('chai').should();
 
 describe('[no-listeners]', function(){
   
@@ -13,20 +13,50 @@ describe('[no-listeners]', function(){
 
 
   it('should not raise error when emitting event with no listeners', function(){
-    var tmp = new Extended;
+    var tmp = new Extended();
     tmp.emit('ping');
   });
 
   it('should not raise error when removing unexistent listener', function(){
-    var tmp = new Extended;
+    var tmp = new Extended();
     tmp.off('none', function(){});
   });
 
   it('should not accept undefined functions as listeners', function(){
-    var tmp = new Extended;
+    var tmp = new Extended();
 
-    tmp.on( 'emit', undefined );
-    tmp.emit( "emit", "anything" )
+    (function(){
+      tmp.on( 'emit', undefined );
+    }).should.throw(/is not a function/);
+
+    (function(){
+      tmp.on( 'emit', null);
+    }).should.throw(/is not a function/);
+
+    (function(){
+      tmp.on( 'emit' );
+    }).should.throw(/is not a function/);
+
+    (function(){
+      tmp.on( 'emit', 1 );
+    }).should.throw(/is not a function/);
+
+    (function(){
+      tmp.on( 'emit', {} );
+    }).should.throw(/is not a function/);
+
+    (function(){
+      tmp.on( 'emit', [] );
+    }).should.throw(/is not a function/);
+
+    (function(){
+      tmp.on( 'emit', '' );
+    }).should.throw(/is not a function/);
+
+    (function(){
+      tmp.on( 'emit', new Date() );
+    }).should.throw(/is not a function/);
+
+    tmp.emit( "emit", "anything" );
   });
-
 });

@@ -22,4 +22,11 @@ describe('[no-listeners]', function(){
     tmp.off('none', function(){});
   });
 
+  it('should not accept undefined functions as listeners', function(){
+    var tmp = new Extended;
+
+    tmp.on( 'emit', undefined );
+    tmp.emit( "emit", "anything" )
+  });
+
 });

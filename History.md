@@ -1,3 +1,10 @@
+0.5.0 / 2014-04-15
+===================
+ * Improving README
+ * Documenting soure code
+ * Keeping structure simple
+ * Improving constructor signature
+
 0.4.1 / 2014-04-15
 ===================
  * Handling invalid handlers

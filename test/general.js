@@ -1,5 +1,5 @@
-var happens = require('../lib/happens'),
-    should = require('chai').should();
+var happens = require('..');
+var should = require('chai').should();
 
 describe('[general]', function(){
   

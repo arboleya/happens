@@ -23,7 +23,7 @@ test.coverage.preview: test.coverage
 
 test.coverage.coveralls: test.coverage
 	@sed -i.bak \
-		"s/^.*happens\/lib/SF:lib/g" \
+		"s/^.*happens/SF:/g" \
 		coverage/lcov.info
 
 	@cat coverage/lcov.info | $(COVERALLS)

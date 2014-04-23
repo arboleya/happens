@@ -1,4 +1,4 @@
-var happens = require('../lib/happens');
+var happens = require('..');
 var should = require('chai').should();
 
 describe('[no-listeners]', function(){

@@ -10,6 +10,20 @@ describe('[general]', function(){
     happens(Obj);
   });
 
+  it('should initialize without arguments', function(){
+    var fn;
+    var called = 0;
+    var tmp = happens();
+
+    tmp.on('ping', fn = function(){ called++; });
+    tmp.off('ping', fn);
+    tmp.emit('ping');
+    tmp.emit('ping');
+
+    called.should.be.equal(0);
+  });
+
+
   it('should listen for `once` just one time', function(){
     var called = 0;
     var tmp = Obj;

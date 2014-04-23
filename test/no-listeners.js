@@ -27,35 +27,35 @@ describe('[no-listeners]', function(){
 
     (function(){
       tmp.on( 'emit', undefined );
-    }).should.throw(/is not a function/);
+    }).should.throw(/is not a Function/);
 
     (function(){
       tmp.on( 'emit', null);
-    }).should.throw(/is not a function/);
+    }).should.throw(/is not a Function/);
 
     (function(){
       tmp.on( 'emit' );
-    }).should.throw(/is not a function/);
+    }).should.throw(/is not a Function/);
 
     (function(){
       tmp.on( 'emit', 1 );
-    }).should.throw(/is not a function/);
+    }).should.throw(/is not a Function/);
 
     (function(){
       tmp.on( 'emit', {} );
-    }).should.throw(/is not a function/);
+    }).should.throw(/is not a Function/);
 
     (function(){
       tmp.on( 'emit', [] );
-    }).should.throw(/is not a function/);
+    }).should.throw(/is not a Function/);
 
     (function(){
       tmp.on( 'emit', '' );
-    }).should.throw(/is not a function/);
+    }).should.throw(/is not a Function/);
 
     (function(){
       tmp.on( 'emit', new Date() );
-    }).should.throw(/is not a function/);
+    }).should.throw(/is not a Function/);
 
     tmp.emit( "emit", "anything" );
   });

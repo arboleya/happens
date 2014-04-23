@@ -22,10 +22,6 @@ test.coverage.preview: test.coverage
 	@cd coverage/lcov-report && python -m SimpleHTTPServer 8080
 
 test.coverage.coveralls: test.coverage
-	@sed -i.bak \
-		"s/^.*happens/SF:/g" \
-		coverage/lcov.info
-
 	@cat coverage/lcov.info | $(COVERALLS)
 
 

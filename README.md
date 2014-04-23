@@ -8,7 +8,7 @@ Super simple and tiny javascript event system.
 ## Instalation
 
 ````
-npm install happens --save-dev
+npm install happens --save
 ````
 
 ## API
@@ -20,22 +20,19 @@ npm install happens --save-dev
 
 ## Usage
 
+### Basic
+
 ````javascript
 var happens = require('happens');
 
-function MyClass() {
-  happens(this);
-}
-
-MyClass.prototype.play() {
-  this.emit('play');
-};
-
-var tmp = new MyClass;
-tmp.on('play', function(){ console.log('playing'); });
-tmp.play()
+var test = happens();
+test.on('init', function(letters){
+  console.log('init', letters); // a, b, c
+});
+test.emit('init', ['a', 'b', 'c'])
 ````
-### Objects are welcome
+
+### With objects
 
 ````javascript
 var happens = require('happens');
@@ -48,6 +45,24 @@ var obj = happens({
 
 obj.on('play', function(){ console.log('playing'); });
 obj.play();
+````
+
+### With Classes
+
+````javascript
+var happens = require('happens');
+
+function MyClass() {
+  happens(this);
+}
+
+MyClass.prototype.play = function() {
+  this.emit('play');
+};
+
+var tmp = new MyClass();
+tmp.on('play', function(){ console.log('playing'); });
+tmp.play();
 ````
 
 # License
@@ -72,5 +87,3 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/serpentem/happens/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

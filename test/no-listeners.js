@@ -17,7 +17,7 @@ describe('[no-listeners]', function(){
     tmp.emit('ping');
   });
 
-  it('should not raise error when removing unexistent listener', function(){
+  it('should not raise error when removing inexistent listener', function(){
     var tmp = new Extended();
     tmp.off('none', function(){});
   });

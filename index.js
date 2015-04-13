@@ -1,6 +1,6 @@
 (function (global, factory) {
   module && module.exports ? module.exports = factory() :
-  define && define.amd ? define(factory) : window.Happens = fatory();
+  define && define.amd ? define(factory) : global.Happens = fatory();
 }(this, function () {
 
   'use strict'

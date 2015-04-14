@@ -1,5 +1,9 @@
----
 language: node_js
-node_js: 0.1
+node_js: "0.10.36"
 
-script: make test.coverage.coveralls
+install:
+  - "curl https://install.meteor.com | /bin/sh"
+
+script:
+  - "make test.coverage.coveralls"
+  - "make test.meteor"

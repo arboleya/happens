@@ -6,4 +6,4 @@ install:
 
 script:
   - "make test.coverage.coveralls"
-  - "make test.meteor"
+  - "make test.meteor.headless"

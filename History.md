@@ -1,3 +1,11 @@
+0.6.0 / 2015-04-13
+===================
+ * Publishing for Bower
+ * Publishing for Meteor
+ * Improving README
+ * Fixing constructor
+ * Using prototype instead of plan objects
+
 0.5.0 / 2014-04-15
 ===================
  * Improving README

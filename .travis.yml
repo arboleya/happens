@@ -2,6 +2,7 @@ language: node_js
 node_js: "0.10.36"
 
 install:
+  - "npm install"
   - "curl https://install.meteor.com | /bin/sh"
 
 script:

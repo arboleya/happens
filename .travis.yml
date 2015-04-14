@@ -10,7 +10,7 @@ language: node_js
 
 node_js:
   - iojs
-  - node
+  - 0.10.36
 
 install:
   - npm install

@@ -7,8 +7,16 @@ Super simple and tiny javascript event system.
 
 ## Instalation
 
-````
+
+````shell
+# node
 npm install happens --save
+
+# bower
+bower install happens
+
+# meteor
+meteor add arboleya:happens
 ````
 
 ## API
@@ -18,12 +26,10 @@ npm install happens --save
  - `.off(event, handler)` - unlistening event
  - `.emit(event, handler)` - emitting event
 
-## Usage
-
 ### Basic
 
 ````javascript
-var happens = require('happens');
+var Happens = require('happens');
 
 var test = happens();
 test.on('init', function(letters){
@@ -35,14 +41,13 @@ test.emit('init', ['a', 'b', 'c'])
 ### With objects
 
 ````javascript
-var happens = require('happens');
+var Happens = require('happens');
 
 var obj = happens({
   play: function(){
     this.emit('play');
   }
 });
-
 obj.on('play', function(){ console.log('playing'); });
 obj.play();
 ````
@@ -50,10 +55,10 @@ obj.play();
 ### With Classes
 
 ````javascript
-var happens = require('happens');
+var Happens = require('happens');
 
 function MyClass() {
-  happens(this);
+  Happens(this);
 }
 
 MyClass.prototype.play = function() {
@@ -64,6 +69,12 @@ var tmp = new MyClass();
 tmp.on('play', function(){ console.log('playing'); });
 tmp.play();
 ````
+
+## Meteor
+
+As Meteor doesn't use `require`, worths mentioning that the `Happens`
+constructor is directly available on the Client and Server.
+
 
 # License
 

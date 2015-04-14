@@ -2,8 +2,8 @@
 
 Super simple and tiny javascript event system.
 
-[![Build Status](https://travis-ci.org/serpentem/happens.png?branch=master)](https://travis-ci.org/serpentem/happens) [![Coverage Status](https://coveralls.io/repos/serpentem/happens/badge.png)](https://coveralls.io/r/serpentem/happens)
-[![Dependency Status](https://gemnasium.com/serpentem/happens.png)](https://gemnasium.com/serpentem/happens) [![NPM version](https://badge.fury.io/js/happens.png)](http://badge.fury.io/js/happens)
+[![Build Status](https://travis-ci.org/arboleya/happens.png?branch=master)](https://travis-ci.org/arboleya/happens) [![Coverage Status](https://coveralls.io/repos/arboleya/happens/badge.png)](https://coveralls.io/r/arboleya/happens)
+[![Dependency Status](https://gemnasium.com/arboleya/happens.png)](https://gemnasium.com/arboleya/happens) [![NPM version](https://badge.fury.io/js/happens.png)](http://badge.fury.io/js/happens)
 
 ## Instalation
 

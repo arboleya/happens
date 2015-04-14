@@ -17,5 +17,5 @@ install:
   - curl https://install.meteor.com | /bin/sh
 
 script:
-  - make test.coverage.coveralls
+  # - make test.coverage.coveralls
   - make test.meteor.headless

@@ -1,6 +1,6 @@
 {
   "name": "happens",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Anderson Arboleya <anderson@arboleya.me>",
   "description": "Super simple and tiny javascript event system",
   "keywords": [
@@ -16,18 +16,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/serpentem/happens"
+    "url": "http://github.com/arboleya/happens"
   },
   "engines": {
     "node": ">= 0.10"
   },
   "dependencies": {},
   "devDependencies": {
-    "chai": "1.8.x",
-    "mocha": "1.14.x",
-    "version": "0.1.x",
-    "istanbul": "0.1.x",
-    "coveralls": "2.3.x",
-    "mversion": "0.2.x"
+    "bower": "^1.4.1",
+    "chai": "2.2.x",
+    "coveralls": "2.11.x",
+    "istanbul": "0.3.x",
+    "mocha": "2.2.x",
+    "mversion": "1.10.x",
+    "npm-check": "^3.2.10",
+    "npm-check-updates": "^1.5.1",
+    "spacejam": "^1.1.4"
   }
 }

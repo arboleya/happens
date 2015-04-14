@@ -1,10 +1,21 @@
+notifications:
+  email: false
+
+git:
+  depth: 2
+
+sudo: false
+
 language: node_js
-node_js: "0.10.36"
+
+node_js:
+  - iojs
+  - node
 
 install:
-  - "npm install"
-  - "curl https://install.meteor.com | /bin/sh"
+  - npm install
+  - curl https://install.meteor.com | /bin/sh
 
 script:
-  - "make test.coverage.coveralls"
-  - "make test.meteor.headless"
+  - make test.coverage.coveralls
+  - make test.meteor.headless

@@ -94,7 +94,7 @@ publish:
 	git tag -a $(VERSION) -m "Releasing $(VERSION)"
 	git push origin master --tags
 	npm publish
-	meteor
+	meteor publish --update
 
 re-publish:
 	git tag -d $(VERSION)

@@ -91,19 +91,16 @@ deps.upgrade:
 ################################################################################
 
 publish:
-	git tag $(VERSION)
-	git push origin $(VERSION)
-	git push origin master
+	git tag -a $(VERSION) -m "Releasing $(VERSION)"
+	git push origin master --tags
 	npm publish
-	bower register
-	meteor 
+	meteor
 
 re-publish:
 	git tag -d $(VERSION)
-	git tag $(VERSION)
 	git push origin :$(VERSION)
-	git push origin $(VERSION)
-	git push origin master -f
+	git tag -a $(VERSION) -m "Releasing $(VERSION)"
+	git push origin master -f --tags
 	npm publish -f
 
 ################################################################################

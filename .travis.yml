@@ -1,11 +1,3 @@
-notifications:
-  email: false
-
-git:
-  depth: 2
-
-# sudo: false
-
 language: node_js
 
 node_js:
@@ -15,9 +7,7 @@ node_js:
 install:
   - npm install
   - curl https://install.meteor.com | /bin/sh
-  - meteor --version
-  - phantomjs -v
 
 script:
-  # - make test.coverage.coveralls
+  - make test.coverage.coveralls
   - make test.meteor.headless

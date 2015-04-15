@@ -4,7 +4,7 @@ notifications:
 git:
   depth: 2
 
-sudo: false
+# sudo: false
 
 language: node_js
 

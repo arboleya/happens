@@ -3,7 +3,7 @@
 ################################################################################
 
 NPM_CHECK=node_modules/.bin/npm-check
-MVERSION=node_modules/.bin/version
+MVERSION=node_modules/.bin/mversion
 MOCHA=node_modules/.bin//mocha
 _MOCHA=node_modules/.bin//_mocha
 COVERALLS=node_modules/.bin/coveralls

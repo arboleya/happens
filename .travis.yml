@@ -15,6 +15,8 @@ node_js:
 install:
   - npm install
   - curl https://install.meteor.com | /bin/sh
+  - meteor --version
+  - phantomjs -v
 
 script:
   # - make test.coverage.coveralls

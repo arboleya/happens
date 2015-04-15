@@ -4,10 +4,7 @@
   "version": "0.6.0",
   "homepage": "https://github.com/arboleya/happens",
   "description": "Super simple and tiny javascript event system",
-  "keywords": [
-    "event",
-    "system"
-  ],
+  "keywords": ["event"],
   "authors": [
     "Anderson Arboleya <anderson@arboleya.me>"
   ],

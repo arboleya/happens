@@ -1,3 +1,10 @@
+global:
+  # COVERALLS_REPO_TOKEN
+  - secure: "grk1Alkgj2vTpiGnmLGnQe0l2P13DCw03VKs/LXyEH53J5Mnnav1WHORUp1BS1ifGzM3sFtYOilgaS+pyrZM6JgONoPOiwRAOjDpKUodI/uwGRTs3pUb732JrBRw6LRtnWkXWAlhLz0gBFh7BBjg+PtYz7Q+Fddk5pHZH059Kfg="
+
+  # CODECLIMATE_REPO_TOKEN
+  - secure: "pBs5UyHtLcW1A4uUQnv/QsucBWedvduooW6+p2V5mEM3xeQquYfdaQkz3SEC3OwR9yTNYBG028hqxpnhylgXJ34RmgDelSeaoOPVEbL2xxhQRBicKWsvl7IwUnRMx6IJ4D1SXOQaQeSeo6A37pl2BZmLRLKD/2/EPnXVRoVjzrI="
+
 language: node_js
 
 node_js:

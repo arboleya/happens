@@ -12,10 +12,10 @@ Super simple and tiny javascript event system.
 
 ````shell
 # node
-npm install happens --save
+npm install happens # --save, --save-dev
 
 # bower
-bower install happens
+bower install happens # --save, --save-dev
 
 # meteor
 meteor add arboleya:happens

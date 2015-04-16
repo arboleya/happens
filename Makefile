@@ -10,6 +10,7 @@ COVERALLS=node_modules/.bin/coveralls
 ISTANBUL=node_modules/.bin/istanbul
 BOWER=node_modules/.bin/bower
 SPACEJAM=node_modules/.bin/spacejam
+CODECLIMATE=node_modules/.bin/codeclimate
 
 ################################################################################
 # variables
@@ -43,6 +44,7 @@ test.coverage.preview: test.coverage
 
 # test code in nodejs, generates coverage and send it to coveralls
 test.coverage.coveralls: test.coverage
+	@$(CODECLIMATE) < coverage/lcov.info
 	@cat coverage/lcov.info | $(COVERALLS)
 
 ################################################################################

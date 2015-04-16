@@ -8,7 +8,6 @@ MOCHA=node_modules/.bin//mocha
 _MOCHA=node_modules/.bin//_mocha
 COVERALLS=node_modules/.bin/coveralls
 ISTANBUL=node_modules/.bin/istanbul
-BOWER=node_modules/.bin/bower
 SPACEJAM=node_modules/.bin/spacejam
 CODECLIMATE=node_modules/.bin/codeclimate
 

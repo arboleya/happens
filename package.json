@@ -22,7 +22,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "bower": "^1.4.1",
     "chai": "2.2.x",
     "codeclimate-test-reporter": "0.0.4",
     "coveralls": "2.11.x",
